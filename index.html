@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iyad Jaber | Senior Head of Operations</title>
+<meta name="description" content="Iyad Jaber — Senior Head of Operations at United Foods Company (PJSC), Dubai. 30+ years in supply chain, logistics and operations leadership.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#0a66c2; --blue-dark:#004182; --blue-soft:#e8f1fb;
+    --ink:#1d2226; --muted:#5e6b76; --line:#e3e7eb; --bg:#f3f5f7; --card:#fff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+  a{color:var(--blue);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav-inner{max-width:1080px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 24px}
+  .brand{font-weight:800;font-size:18px;color:var(--ink)}
+  .brand span{color:var(--blue)}
+  .nav-links{display:flex;gap:22px}
+  .nav-links a{color:var(--muted);font-weight:500;font-size:14px}
+  .nav-links a:hover{color:var(--blue);text-decoration:none}
+
+  .wrap{max-width:1080px;margin:auto;padding:24px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:20px;overflow:hidden}
+  .card-body{padding:28px 32px}
+
+  .cover{height:170px;background:linear-gradient(120deg,#004182 0%,#0a66c2 55%,#3d8fdb 100%);position:relative}
+  .cover::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 30%,rgba(255,255,255,.18),transparent 45%)}
+  .profile{padding:0 32px 28px}
+  .avatar{width:140px;height:140px;border-radius:50%;border:5px solid #fff;margin-top:-70px;position:relative;z-index:1;
+    background:linear-gradient(135deg,#0a66c2,#004182);color:#fff;display:grid;place-items:center;font-size:48px;font-weight:700;letter-spacing:1px}
+  h1{font-size:30px;font-weight:800;margin-top:14px;letter-spacing:-.3px}
+  .headline{font-size:18px;color:var(--ink);margin-top:2px}
+  .meta{color:var(--muted);font-size:14px;margin-top:6px;display:flex;flex-wrap:wrap;gap:6px 16px}
+  .actions{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:9px 20px;border-radius:999px;font-weight:600;font-size:15px;border:1.5px solid var(--blue)}
+  .btn-primary{background:var(--blue);color:#fff}
+  .btn-primary:hover{background:var(--blue-dark);text-decoration:none}
+  .btn-ghost{color:var(--blue);background:#fff}
+  .btn-ghost:hover{background:var(--blue-soft);text-decoration:none}
+
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+  .stat{padding:20px 24px;border-right:1px solid var(--line)}
+  .stat:last-child{border-right:none}
+  .stat b{display:block;font-size:26px;color:var(--blue);font-weight:800}
+  .stat small{color:var(--muted);font-size:13px}
+
+  h2{font-size:21px;font-weight:700;margin-bottom:16px}
+  .about p{color:#38434d;margin-bottom:10px}
+
+  .job{display:flex;gap:16px;padding:20px 0;border-top:1px solid var(--line)}
+  .job:first-of-type{border-top:none;padding-top:4px}
+  .logo{flex:0 0 52px;height:52px;border-radius:10px;background:var(--blue-soft);color:var(--blue);display:grid;place-items:center;font-weight:800;font-size:17px}
+  .job h3{font-size:16px;font-weight:700}
+  .job .co{font-size:14px}
+  .job .when{font-size:13px;color:var(--muted)}
+  .job ul{margin:10px 0 0 18px;color:#38434d;font-size:14.5px}
+  .job li{margin-bottom:4px}
+  .role{margin-top:12px;padding-left:14px;border-left:2px solid var(--line)}
+  .role:first-of-type{margin-top:6px}
+  .current{display:inline-block;font-size:11px;font-weight:600;color:#057642;background:#e6f4ea;border-radius:999px;padding:1px 8px;margin-left:6px;vertical-align:middle}
+
+  .skills{display:flex;flex-wrap:wrap;gap:10px}
+  .skill{padding:8px 16px;border-radius:999px;border:1px solid var(--line);background:#fafbfc;font-size:14px;font-weight:500}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .edu{display:flex;gap:16px;margin-bottom:18px}
+  .edu:last-child{margin-bottom:0}
+  .edu h3{font-size:16px}
+  .edu p{font-size:14px;color:var(--muted)}
+
+  .contact{text-align:center}
+  .contact p{color:var(--muted);margin-bottom:18px}
+  footer{text-align:center;color:var(--muted);font-size:13px;padding:10px 0 40px}
+
+  @media (max-width:760px){
+    .nav-links{display:none}
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .stat:nth-child(2){border-right:none}
+    .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+    .grid2{grid-template-columns:1fr}
+    .card-body,.profile{padding-left:20px;padding-right:20px}
+    h1{font-size:25px}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="#top">Iyad <span>Jaber</span></a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="top">
+
+  <!-- Profile header -->
+  <section class="card">
+    <div class="cover"></div>
+    <div class="profile">
+      <div class="avatar">IJ</div>
+      <h1>Iyad Jaber</h1>
+      <div class="headline">Senior Head of Operations at United Foods Company (PJSC)</div>
+      <div class="meta">
+        <span>📍 Dubai, United Arab Emirates</span>
+        <span>🎓 MSc Strategic Supply Chain Management</span>
+        <span>👥 500+ connections · 3,100+ followers</span>
+      </div>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://www.linkedin.com/in/iyad-jaber-88a9322b/" target="_blank" rel="noopener">View LinkedIn profile</a>
+        <a class="btn btn-ghost" href="#experience">See experience</a>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>30+</b><small>Years in logistics &amp; operations</small></div>
+      <div class="stat"><b>9+</b><small>Years at United Foods</small></div>
+      <div class="stat"><b>6</b><small>Companies across the region</small></div>
+      <div class="stat"><b>3</b><small>Countries: UAE · KSA · Jordan</small></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="card about" id="about">
+    <div class="card-body">
+      <h2>About</h2>
+      <p>Operations and supply chain leader with more than three decades of experience across food manufacturing, distribution and international freight. Currently Senior Head of Operations at United Foods Company (PJSC) in Dubai, where I also lead the supply chain function.</p>
+      <p>My career began in freight forwarding at Orient Transport Company / Kuehne + Nagel, and grew through logistics leadership roles in Jordan, Saudi Arabia and the UAE. I focus on building planning processes, efficient warehousing and transport networks, cost control and strong teams that deliver consistent customer satisfaction.</p>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="card" id="experience">
+    <div class="card-body">
+      <h2>Experience</h2>
+
+      <div class="job">
+        <div class="logo">UF</div>
+        <div>
+          <h3>United Foods Company (PJSC)</h3>
+          <div class="when">9 yrs 4 mos · Dubai, United Arab Emirates</div>
+          <div class="role">
+            <h3>Senior Head of Operations <span class="current">Current</span></h3>
+            <div class="when">Full-time · Apr 2021 – Present</div>
+            <ul><li>Leads end-to-end manufacturing and supply chain operations, strategic planning and cross-functional coordination.</li></ul>
+          </div>
+          <div class="role">
+            <h3>Head of Supply Chain <span class="current">Current</span></h3>
+            <div class="when">Aug 2017 – Present</div>
+            <ul><li>Owns planning, procurement logistics, warehousing and distribution for the business.</li></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="logo">HP</div>
+        <div>
+          <h3>Logistics Director</h3>
+          <div class="co">Hoshan Pan Gulf</div>
+          <div class="when">Dec 2013 – Jun 2017 · 3 yrs 7 mos · Dubai</div>
+          <ul><li>Directed logistics strategy and operations, with a focus on communication and strategic execution.</li></ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="logo">HB</div>
+        <div>
+          <h3>Halwani Bros. Co</h3>
+          <div class="when">5 yrs 9 mos · Jeddah, Saudi Arabia</div>
+          <div class="role">
+            <h3>Supply Chain &amp; Customer Service Manager</h3>
+            <div class="when">Jun 2010 – Dec 2013</div>
+            <ul>
+              <li>Built planning processes covering demand, production, raw materials and distribution of finished goods to branches.</li>
+              <li>Developed logistics operations: warehousing, transportation, import/export and fleet maintenance.</li>
+              <li>Set up customer service strategy, complaint handling and satisfaction audits and surveys.</li>
+              <li>Led supply chain strategy and policy, fleet and contract management, capacity planning and inventory control.</li>
+            </ul>
+          </div>
+          <div class="role">
+            <h3>Logistics Operations Manager</h3>
+            <div class="when">Apr 2008 – Jun 2010</div>
+            <ul>
+              <li>Ran central and branch warehouse and transport operations in line with ISO standards and quality and safety requirements.</li>
+              <li>Improved storage and delivery efficiency, tracked KPIs and kept department spend within budget.</li>
+              <li>Managed logistics infrastructure (buildings, equipment and fleet) and developed managers and supervisors.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="logo">MI</div>
+        <div>
+          <h3>Logistics Manager</h3>
+          <div class="co">Modern Intl. Trading Resources</div>
+          <div class="when">Oct 1999 – Mar 2008 · 8 yrs 6 mos</div>
+          <ul>
+            <li>Managed procurement and logistics projects, and all import and export shipments.</li>
+            <li>Led teams at branches in Jordan and Syria; ran warehousing, distribution and materials-handling solutions.</li>
+            <li>Delivered operating cost reductions and managed contracts, agreements and customer relationships.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="logo">ET</div>
+        <div>
+          <h3>Transit and Export Freight Manager</h3>
+          <div class="co">Eagle Transport Services Co</div>
+          <div class="when">Nov 1998 – Oct 1999 · 1 yr</div>
+          <ul><li>Managed transit shipments through Jordan and all export operations, budgets and cost calculations.</li></ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="logo">OT</div>
+        <div>
+          <h3>Orient Transport Company / Kuehne + Nagel</h3>
+          <div class="when">6 yrs 5 mos</div>
+          <div class="role">
+            <h3>Import and Export Manager</h3>
+            <div class="when">Jul 1994 – Oct 1998</div>
+            <ul><li>Ran sea and land freight import/export operations, the department budget and quotations, reporting to head office in Switzerland.</li></ul>
+          </div>
+          <div class="role">
+            <h3>Assistant Import and Export Manager</h3>
+            <div class="when">Jun 1992 – Jun 1994</div>
+            <ul><li>Handled shipment procedures, subcontractor negotiations, warehousing supervision and reporting.</li></ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Skills + Education -->
+  <div class="grid2">
+    <section class="card" id="skills">
+      <div class="card-body">
+        <h2>Skills</h2>
+        <div class="skills">
+          <span class="skill">Supply Chain Operations</span>
+          <span class="skill">International Logistics</span>
+          <span class="skill">Freight Forwarding</span>
+          <span class="skill">Manufacturing Operations Management</span>
+          <span class="skill">Strategic Planning</span>
+          <span class="skill">Production Planning</span>
+          <span class="skill">Project Management</span>
+          <span class="skill">Project Planning</span>
+          <span class="skill">Customer Satisfaction</span>
+          <span class="skill">CRM</span>
+          <span class="skill">Collaborative Problem Solving</span>
+          <span class="skill">Communication</span>
+          <span class="skill">Strategy</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="education">
+      <div class="card-body">
+        <h2>Education</h2>
+        <div class="edu">
+          <div class="logo">UR</div>
+          <div>
+            <h3>University of Roehampton, London</h3>
+            <p>MSc, Strategic Supply Chain Management</p>
+          </div>
+        </div>
+        <div class="edu">
+          <div class="logo">UT</div>
+          <div>
+            <h3>University of Transport &amp; Logistics</h3>
+            <p>Bachelor's Degree, Integral &amp; Industrial Transport Engineering (Logistics Engineering)</p>
+            <p>1984 – 1989</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Contact -->
+  <section class="card contact" id="contact">
+    <div class="card-body">
+      <h2>Let's connect</h2>
+      <p>Open to conversations about operations, supply chain and logistics in the food and FMCG sector.</p>
+      <a class="btn btn-primary" href="https://www.linkedin.com/in/iyad-jaber-88a9322b/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+    </div>
+  </section>
+
+  <footer>© <span id="y"></span> Iyad Jaber · Dubai, UAE</footer>
+</main>
+
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>
