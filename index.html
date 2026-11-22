@@ -141,6 +141,29 @@ section{padding:110px 0;position:relative}
 .g:hover span{transform:none}.g:hover span small{opacity:1}
 .g1{grid-column:span 2;grid-row:span 2}.g4{grid-column:span 2}
 
+/* network design */
+.net-hero{position:relative;height:340px;border-radius:30px;overflow:hidden;margin-bottom:24px}
+.net-hero img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s cubic-bezier(.2,.8,.2,1)}
+.net-hero:hover img{transform:scale(1.06)}
+.net-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(7,7,26,.95) 0%,rgba(124,58,237,.7) 45%,rgba(236,72,153,.25) 75%,transparent)}
+.net-hero-text{position:absolute;z-index:2;left:48px;top:50%;transform:translateY(-50%);max-width:560px}
+.net-tag{display:inline-block;padding:7px 14px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);font-size:13px;font-weight:600;margin-bottom:16px}
+.net-hero h3{font-size:clamp(30px,4.2vw,50px);font-weight:800;letter-spacing:-1.5px;line-height:1.05}
+.net-hero p{color:#e3e5ff;margin-top:14px;font-size:16.5px}
+.net-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.net-card{border-radius:24px;overflow:hidden;background:var(--card);border:1px solid var(--line);transition:transform .4s,border-color .4s,box-shadow .4s}
+.net-card:hover{transform:translateY(-10px);border-color:rgba(236,72,153,.5);box-shadow:0 30px 60px -25px rgba(236,72,153,.5)}
+.net-img{position:relative;height:200px;overflow:hidden}
+.net-img img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.net-card:hover .net-img img{transform:scale(1.12)}
+.net-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(7,7,26,.85))}
+.net-no{position:absolute;right:18px;bottom:10px;z-index:2;font:800 44px Sora;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.net-body{position:relative;padding:34px 26px 28px}
+.net-ico{position:absolute;top:-28px;left:26px;width:56px;height:56px;border-radius:16px;background:var(--grad);display:grid;place-items:center;font-size:26px;box-shadow:0 12px 30px -8px var(--pink);transition:transform .5s}
+.net-card:hover .net-ico{transform:rotate(-8deg) scale(1.08)}
+.net-body h4{font:700 20px Sora;margin-bottom:8px}
+.net-body p{color:var(--muted);font-size:15px}
+
 /* skills */
 .marquee{overflow:hidden;padding:14px 0;mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
 .track{display:flex;gap:16px;width:max-content;animation:scroll 40s linear infinite}
@@ -190,6 +213,8 @@ footer{padding:40px 0;text-align:center;color:var(--muted);font-size:14px}
   .about,.edu{grid-template-columns:1fr}
   .about-imgs{height:400px}
   .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:170px}
+  .net-grid{grid-template-columns:1fr}
+  .net-hero{height:300px}.net-hero-text{left:24px;right:24px}
   .g1,.g4{grid-column:span 2}.g1{grid-row:span 1}
   section{padding:80px 0}
 }
@@ -202,7 +227,7 @@ footer{padding:40px 0;text-align:center;color:var(--muted);font-size:14px}
   <div class="container nav-inner">
     <a href="#top" class="brand">Iyad<b>.</b>Jaber</a>
     <div class="links">
-      <a href="#about">About</a><a href="#experience">Experience</a><a href="#gallery">Expertise</a><a href="#skills">Skills</a><a href="#education">Education</a>
+      <a href="#about">About</a><a href="#experience">Experience</a><a href="#network">Expertise</a><a href="#skills">Skills</a><a href="#education">Education</a>
     </div>
     <a href="https://www.linkedin.com/in/iyad-jaber-88a9322b/" target="_blank" rel="noopener" class="cta">Let's connect</a>
   </div>
@@ -254,7 +279,7 @@ footer{padding:40px 0;text-align:center;color:var(--muted);font-size:14px}
       <p>I'm an operations and supply chain leader with <strong>more than three decades</strong> of experience in food manufacturing, distribution and international freight.</p>
       <p>I started in freight forwarding with <strong>Orient Transport / Kuehne + Nagel</strong>, then held logistics leadership roles in Jordan, Saudi Arabia and the UAE. Now I'm <strong>Senior Head of Operations</strong> at United Foods Company (PJSC) in Dubai.</p>
       <div class="pillars">
-        <div class="pillar"><i>📦</i>Supply chain strategy</div>
+        <div class="pillar"><i>🗺️</i>Supply chain network design</div>
         <div class="pillar"><i>🏭</i>Manufacturing operations</div>
         <div class="pillar"><i>🚚</i>Fleet &amp; distribution</div>
         <div class="pillar"><i>🌍</i>International freight</div>
@@ -333,9 +358,37 @@ footer{padding:40px 0;text-align:center;color:var(--muted);font-size:14px}
   </div>
 </section>
 
-<section id="gallery">
+<section id="network">
   <div class="container">
-    <div class="reveal"><div class="eyebrow">Areas of expertise</div><h2 class="title">Where I <span class="grad-text">make things move</span></h2></div>
+    <div class="reveal"><div class="eyebrow">Areas of expertise</div><h2 class="title">Designing networks that <span class="grad-text">make things move</span></h2></div>
+    <div class="net-hero reveal z">
+      <img src="https://images.unsplash.com/photo-1494412685616-a5d310fbb07d?auto=format&fit=crop&w=1800&q=80" alt="Aerial view of colorful shipping containers at a busy port" loading="lazy">
+      <div class="net-hero-text">
+        <span class="net-tag">🗺️ Core expertise</span>
+        <h3>Supply Chain Network Design</h3>
+        <p>Shaping the whole network end to end, from where products are made to the warehouses, fleets and processes that get them to market.</p>
+      </div>
+    </div>
+    <div class="net-grid">
+      <div class="net-card reveal d1">
+        <div class="net-img"><img src="https://images.unsplash.com/photo-1651525670114-2b8117390b28?auto=format&fit=crop&w=900&q=80" alt="Team working on a factory floor" loading="lazy"><span class="net-no">01</span></div>
+        <div class="net-body"><div class="net-ico">🏭</div><h4>Manufacturing</h4><p>Planning production footprints, capacity and the flow of raw materials and finished goods across plants.</p></div>
+      </div>
+      <div class="net-card reveal d2">
+        <div class="net-img"><img src="https://images.unsplash.com/photo-1772299121503-cd62a57e3a26?auto=format&fit=crop&w=900&q=80" alt="Workers inspecting a large industrial warehouse space" loading="lazy"><span class="net-no">02</span></div>
+        <div class="net-body"><div class="net-ico">🏗️</div><h4>Logistics Infrastructure Design</h4><p>Designing warehouses, distribution centres, fleet and transport networks that are efficient and ready to scale.</p></div>
+      </div>
+      <div class="net-card reveal d3">
+        <div class="net-img"><img src="https://images.unsplash.com/photo-1769147339214-076740872485?auto=format&fit=crop&w=900&q=80" alt="Mechanical parts resting on engineering blueprints" loading="lazy"><span class="net-no">03</span></div>
+        <div class="net-body"><div class="net-ico">⚙️</div><h4>Engineering &amp; Operations Design</h4><p>Engineering the processes, layouts, materials handling and KPIs that keep day-to-day operations running smoothly.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" style="padding-top:0">
+  <div class="container">
+    <div class="reveal"><h2 class="title" style="font-size:clamp(26px,3.2vw,38px);margin-bottom:34px">Hands-on <span class="grad-text">operations</span></h2></div>
     <div class="gallery">
       <div class="g g1 reveal z"><img src="https://images.unsplash.com/photo-1590496793907-4d66e2994b4d?auto=format&fit=crop&w=1200&q=80" alt="Container ship loaded by cranes at dusk" loading="lazy"><span>International Freight<small>Sea, land and transit shipments since 1992</small></span></div>
       <div class="g reveal z d1"><img src="https://images.unsplash.com/photo-1651525670054-279c154bc3b6?auto=format&fit=crop&w=700&q=80" alt="Factory production machines" loading="lazy"><span>Manufacturing<small>Food production operations</small></span></div>
@@ -384,7 +437,7 @@ let ri=0,ci=0,del=false;const el=document.getElementById('typed');
   else{del=false;ri=(ri+1)%roles.length;setTimeout(type,300)}})();
 
 // skills marquee
-const s1=["Supply Chain Operations","International Logistics","Freight Forwarding","Manufacturing Operations Management","Strategic Planning","Production Planning","Inventory Control"];
+const s1=["Supply Chain Network Design","Logistics Infrastructure Design","Engineering & Operations Design","Supply Chain Operations","International Logistics","Freight Forwarding","Manufacturing Operations Management","Strategic Planning","Production Planning","Inventory Control"];
 const s2=["Project Management","Project Planning","Customer Satisfaction","CRM","Collaborative Problem Solving","Communication","Strategy","Fleet Management"];
 const fill=(id,a)=>{document.getElementById(id).innerHTML=[...a,...a].map(x=>`<span class="pill">${x}</span>`).join('')};
 fill('t1',s1);fill('t2',s2);
