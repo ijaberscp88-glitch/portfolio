@@ -23,6 +23,20 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Download stock photos into the site (served from this domain)
+        run: |
+          mkdir -p img
+          get() { curl -fsSL --retry 4 --retry-delay 3 -o "img/$1.jpg" "https://images.unsplash.com/photo-$2?auto=format&fit=crop&w=$3&q=75"; }
+          get hero 1512453979798-5ea266f8880c 2000
+          get warehouse 1553413077-190dd305871c 1000
+          get containers 1601897690942-bcacbad33e55 900
+          get port 1494412685616-a5d310fbb07d 1400
+          get manufacturing 1651525670114-2b8117390b28 900
+          get ship 1590496793907-4d66e2994b4d 1600
+          get factory 1651525670054-279c154bc3b6 800
+          get racks 1587293852726-70cdb56c2866 800
+          get truck 1611746351408-c0a1346be8e8 1200
+          ls -la img
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload site
